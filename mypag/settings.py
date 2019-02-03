@@ -25,7 +25,7 @@ SECRET_KEY = 'ljli8%eky3oc9n!5!4$#$i@cgcdieu3yyv^=w@i%9a!0#8zj%@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1','alphastriker.pythonanywhere.com']
 
 
 # Application definition
