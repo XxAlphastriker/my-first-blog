@@ -53,10 +53,11 @@ body {
 
 .video {
 position: relative;
-padding-bottom: 56.25%;
+padding-bottom: 75%; #56.25% es un formato 16/9 y 75% un formato 4/3
 height: 0;
 overflow: hidden;
 }
+
 .video iframe {
   position: absolute;
   top: 0;
