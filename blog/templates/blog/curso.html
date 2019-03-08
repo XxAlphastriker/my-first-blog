@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends 'blog/baseuser.html' %}
+
+{% block title %} creando un curso {% endblock %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+  <div class="saludo" id="saludo">
+    <h1>Hola {{ user.username }}</h1>
+  </div>
+  <div class="links" id="links">
+    <h2><a href="{% url 'sign_out' %}">Cerrar sesión</a></h2>
+    <a href="{% url 'bienvenida' %}">Inicio</a>
+  {% else %}
+    <h2><a href="{% url 'sign_up' %}"> Registrate </a></h2>
+    <h2><a href="{% url 'sign_in' %}">Iniciar Sesión</a></h2>
+    <br>
+  {% endif %}
+<div class="detalles" id="details">
+  <h1>Bienvenido a la sección de creacion de cursos </h1>
+  <p>En esta seccion tu prodras crear tu propio curso para compartir tus conocimientos con toda a quella persona que quiera aprender sobre el tema
+  aquí encontrar los liniamientos que tendras que cumplir para que tu curso cumpla con los starndares de la pagina y asi poder formar parte de la
+comunidad de educadores.</p>
+</div>
+
+<div class="liniamientos">
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<div class="">
+  <video width="320" height="240" controls preload="True" allowfullscreen>
+    <source src="https://drive.google.com/file/d/12ysikmHRByIXKgUORGo-vTQi_7Th3DN0/view" type="video">
+    Este video no es compatible con su navegador
+  </video>
+</div>
+<div class="otro">
+  <iframe src="https://drive.google.com/file/d/12ysikmHRByIXKgUORGo-vTQi_7Th3DN0/preview" width="640" height="480" controls allowfullscreen></iframe>
+</div>
+
+<a href="https://drive.google.com/drive/folders/14_exfKQp7xJiswcdQMbWJlKEHUYm8FRx?usp=sharing"><input type="button" name="" value="Cargar Video"></a>
+
+{% endblock content %}

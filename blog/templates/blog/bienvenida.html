@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'blog/baseuser.html' %}
+
+{% block title %} Bienvenido {% endblock %}
+
+{% block content %}
+
+  {% if user.is_authenticated %}
+  <div class="saludo" id="saludo">
+    <h1>Hola {{ user.username }}</h1>
+  </div>
+  <div class="links" id="links">
+    <h2><a href="{% url 'sign_out' %}">Cerrar sesión</a></h2>
+    <a href="{% url 'carga' %}">Crear tu curso</a>
+  {% else %}
+    <h2><a href="{% url 'sign_up' %}"> Registrate </a></h2>
+    <h2><a href="{% url 'sign_in' %}">Iniciar Sesión</a></h2>
+    <br>
+  {% endif %}
+  </div>
+  <div class="catalogo" id="catalago">
+    <img src="static/media/curso.jpg" alt="ejemplo curo" width="100%" height="400px" >
+  </div>
+  <div class="cursos" id="cursos">
+    <h1>Catalago de Cursos</h1>
+  </div>
+
+{% endblock content %}
